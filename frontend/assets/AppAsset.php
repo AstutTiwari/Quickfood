@@ -22,7 +22,7 @@ class AppAsset extends AssetBundle
         'css/magnific-popup.css',
         'css/pop_up.css',
         'css/custom.css',
-         'css/site.css',
+        'css/site.css',
     ];
     public $js = [
         'js/modernizr.js',
@@ -30,9 +30,11 @@ class AppAsset extends AssetBundle
         'js/common_scripts_min.js',
         'js/functions.js',
         'assets/validate.js',
+        'js/video_header.js',
     ];
     public $depends = [
         'yii\web\YiiAsset',
+        'yii\web\JqueryAsset',
         'yii\bootstrap\BootstrapAsset',
     ];
 }

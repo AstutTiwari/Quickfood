@@ -309,3 +309,19 @@
         </div>
         <!-- End row -->
     </div>
+    <?php
+
+$js = <<< JS
+       jQuery(document).ready(function(){
+           'use strict';
+           HeaderVideo.init({
+               container: $('.header-video'),
+               header: $('.header-video--media'),
+               videoTrigger: $("#video-trigger"),
+               autoPlayVideo: true
+           });
+       
+       });
+JS;
+$this->registerJs($js);
+?>

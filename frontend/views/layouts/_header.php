@@ -6,6 +6,7 @@ use frontend\assets\AppAsset;
 use yii\helpers\Html;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
+use yii\widgets\Menu;
  AppAsset::register($this);
 ?>
    <!-- Header ================================================== -->
@@ -27,7 +28,68 @@ use yii\bootstrap\NavBar;
                             <img src="img/logo.png" width="190" height="23" alt="" data-retina="true">
                         </div>
                         <a href="#" class="open_close" id="close_in"><i class="icon_close"></i></a>
-                        <ul>
+                        <?php
+                        echo Menu::widget([
+                            'items' => [
+                                [
+                                    'label' => 'Home',
+                                    'url' => ['javascript:void(0);'],
+                                    'options'=>['class'=>'submenu'],
+                                    'template' => '<a href="{url}" class="show-submenu">{label}<i class="icon-down-open-mini"></i></a>',
+                                    'items' => [
+                                        ['label' => 'Home Video background', 'url' => ['product/new']],
+                                        ['label' => 'Home Static image', 'url' => ['product/popular']],
+                                        ['label' => 'Home Text rotator', 'url' => ['product/popular']],
+                                        ['label' => 'Home Layer slider', 'url' => ['product/popular']],
+                                        ['label' => 'Home Cookie bar', 'url' => ['product/popular']],
+                                        ['label' => 'Home Popup', 'url' => ['product/popular']],
+                                        ['label' => 'Home Mobile synthetic', 'url' => ['product/popular']],
+                                        ['label' => 'Top Menu version 2', 'url' => ['product/popular']],
+                                    ]
+                                ],
+                                [
+                                    'label' => 'Restaurants',
+                                    'url' => ['javascript:void(0);'],
+                                    'options'=>['class'=>'submenu'],
+                                    'template' => '<a href="{url}" class="show-submenu">{label}<i class="icon-down-open-mini"></i></a>',
+                                    'items' => [
+                                        ['label' => 'Home Video background', 'url' => ['product/new']],
+                                        ['label' => 'Home Static image', 'url' => ['product/popular']],
+                                        ['label' => 'Home Text rotator', 'url' => ['product/popular']],
+                                        ['label' => 'Home Layer slider', 'url' => ['product/popular']],
+                                        ['label' => 'Home Cookie bar', 'url' => ['product/popular']],
+                                        ['label' => 'Home Popup', 'url' => ['product/popular']],
+                                        ['label' => 'Home Mobile synthetic', 'url' => ['product/popular']],
+                                        ['label' => 'Top Menu version 2', 'url' => ['product/popular']],
+                                    ]
+                                ],
+                                ['label' => 'About Us', 'url' => ['site/index']],
+                                ['label' => 'Faq', 'url' => ['site/about']],
+                                [
+                                    'label' => 'Pages',
+                                    'url' => ['javascript:void(0);'],
+                                    'options'=>['class'=>'submenu'],
+                                    'template' => '<a href="{url}" class="show-submenu">{label}<i class="icon-down-open-mini"></i></a>',
+                                    'items' => [
+                                        ['label' => 'Home Video background', 'url' => ['product/new']],
+                                        ['label' => 'Home Static image', 'url' => ['product/popular']],
+                                        ['label' => 'Home Text rotator', 'url' => ['product/popular']],
+                                        ['label' => 'Home Layer slider', 'url' => ['product/popular']],
+                                        ['label' => 'Home Cookie bar', 'url' => ['product/popular']],
+                                        ['label' => 'Home Popup', 'url' => ['product/popular']],
+                                        ['label' => 'Home Mobile synthetic', 'url' => ['product/popular']],
+                                        ['label' => 'Top Menu version 2', 'url' => ['product/popular']],
+                                    ]
+                                ],
+                                ['label' => 'Login', 'url' => ['site/index']],
+                                ['label' => 'Faq', 'url' => ['site/about']],
+                                
+                               
+                            ],
+                            'itemOptions'=>array('class'=>'submenu'),
+                        ]);
+                        ?>
+                        <!-- <ul>
                             <li class="submenu">
                                 <a href="javascript:void(0);" class="show-submenu">Home<i class="icon-down-open-mini"></i></a>
                                 <ul>
@@ -76,7 +138,7 @@ use yii\bootstrap\NavBar;
                             </li>
                             <li><a href="#0" data-toggle="modal" data-target="#login_2">Login</a></li>
                             <li><a href="http://themeforest.net/item/quickfood-delivery-or-takeaway-food-template/13958100?ref=ansonika" target="_blank">Purchase this template</a></li>
-                        </ul>
+                        </ul> -->
                     </div>
                     <!-- End main-menu -->
                 </nav>
